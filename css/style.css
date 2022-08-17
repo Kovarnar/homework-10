@@ -1,0 +1,396 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-size: 0;
+}
+
+a, a:link, a:hover, a:visited {
+  text-decoration: none;
+  border-radius: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+html, body {
+  line-height: 1;
+  font-size: 14px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 30px 0;
+}
+@media only screen and (min-width: 460px) {
+  main {
+    padding: 45px 0;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main {
+    padding: 60px 0;
+  }
+}
+main .container {
+  padding: 0 15px;
+}
+
+.subtitle {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 0.8571428571rem;
+  color: #898F8F;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.33;
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 460px) {
+  .subtitle {
+    font-size: 1.0714285714rem;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .subtitle {
+    font-size: 1.2857142857rem;
+    margin-bottom: 15px;
+  }
+}
+
+.main-title {
+  font-size: 2.1428571429rem;
+  font-weight: 900;
+  color: #FFCC00;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 460px) {
+  .main-title {
+    font-size: 3.5714285714rem;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .main-title {
+    font-size: 4.2857142857rem;
+    margin-bottom: 40px;
+  }
+}
+
+.decor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 460px) {
+  .decor {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .decor {
+    margin-bottom: 40px;
+  }
+}
+.decor .icon {
+  width: 10px;
+  height: 10px;
+}
+@media only screen and (min-width: 460px) {
+  .decor .icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .decor .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+.decor::before, .decor::after {
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 1px;
+  background-color: #FFCC00;
+}
+@media only screen and (min-width: 460px) {
+  .decor::before, .decor::after {
+    width: 160px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .decor::before, .decor::after {
+    width: 210px;
+  }
+}
+
+.frontend {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px 0px; /*------------*/
+  padding: 20px 0;
+}
+@media only screen and (min-width: 1000px) {
+  .frontend {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 65px 0;
+  }
+}
+.frontend > div {
+  max-width: 430px;
+}
+
+.photo {
+  padding: 15px;
+  border: 1px solid transparent;
+  background: conic-gradient(from 90deg at top 1px left 1px, rgba(0, 0, 0, 0) 90deg, #FFCC00 0) 0 0, conic-gradient(from 180deg at top 1px right 1px, rgba(0, 0, 0, 0) 90deg, #FFCC00 0) 100% 0, conic-gradient(from 0deg at bottom 1px left 1px, rgba(0, 0, 0, 0) 90deg, #FFCC00 0) 0 100%, conic-gradient(from -90deg at bottom 1px right 1px, rgba(0, 0, 0, 0) 90deg, #FFCC00 0) 100% 100%;
+  background-size: 100px 100px;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+.photo img {
+  max-width: 100%;
+  border: 1px solid #FFCC00;
+}
+
+.line {
+  display: none;
+}
+@media only screen and (min-width: 1000px) {
+  .line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 1px;
+    background-color: #FFCC00;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.about .name {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7142857143rem;
+  color: #666;
+}
+.about .name::after {
+  content: "";
+  display: flex;
+  width: 50px;
+  height: 1px;
+  background-color: #FFCC00;
+  margin: 10px auto;
+}
+@media only screen and (min-width: 767px) {
+  .about .name::after {
+    width: 75px;
+    margin: 20px auto;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .about .name::after {
+    width: 100px;
+    margin: 30px auto;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .about .name {
+    font-size: 2.1428571429rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .about .name {
+    font-size: 2.5714285714rem;
+  }
+}
+.about h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1428571429rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 767px) {
+  .about h3 {
+    font-size: 1.4285714286rem;
+    margin-bottom: 22.5px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .about h3 {
+    font-size: 1.7142857143rem;
+    margin-bottom: 30px;
+  }
+}
+.about ul {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 767px) {
+  .about ul {
+    margin-bottom: 37.5px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .about ul {
+    margin-bottom: 50px;
+  }
+}
+.about ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  cursor: pointer;
+}
+.about ul li:not(:last-child) {
+  margin-right: 5px;
+}
+.about ul li:hover {
+  border-color: #666;
+}
+.about ul li .icon {
+  max-width: 20px;
+  max-height: 12px;
+  fill: #ccc;
+}
+.about ul li:hover .icon {
+  fill: #666;
+}
+.about p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 767px) {
+  .about p {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .about p {
+    margin-bottom: 20px;
+  }
+}
+.about .view {
+  padding: 5px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: 1px solid #FFCC00;
+  cursor: pointer;
+}
+.about .view:hover {
+  background-color: #FFCC00;
+  color: #333;
+}
+
+.dotted-line {
+  position: relative;
+  display: block;
+  margin-bottom: 12.5px;
+  height: 2px;
+  width: 60px;
+  background-color: #FFCC00;
+}
+@media only screen and (min-width: 767px) {
+  .dotted-line {
+    height: 3px;
+    margin-bottom: 18.75px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .dotted-line {
+    height: 4px;
+    margin-bottom: 25px;
+  }
+}
+.dotted-line::before, .dotted-line::after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+}
+@media only screen and (min-width: 767px) {
+  .dotted-line::before, .dotted-line::after {
+    height: 3px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .dotted-line::before, .dotted-line::after {
+    height: 4px;
+  }
+}
+.dotted-line::before {
+  left: 10px;
+}
+.dotted-line::after {
+  right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
